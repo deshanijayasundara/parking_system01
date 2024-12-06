@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - SmartPark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a4db3 100%);
+        }
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        .required::after {
+            content: "*";
+            color: red;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-p-square-fill text-primary me-2 fs-3"></i>
+                <span class="fw-bold">SmartPark</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center mb-4">Get Started with SmartPark</h2>
+                
+                <!-- Customer Details Form -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Customer Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="customerForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label required">Full Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">NIC Number</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">Contact Number</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">Email</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Payment Details -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Payment Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="paymentForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label required">Card Number</label>
+                                    <input type="text" class="form-control" required maxlength="16">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">Card Holder Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">Expiry Date</label>
+                                    <input type="text" class="form-control" placeholder="MM/YY" required maxlength="5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">CVV</label>
+                                    <input type="password" class="form-control" required maxlength="3">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Parking Details -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Parking Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="parkingForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label required">Vehicle Number</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">Vehicle Type</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select vehicle type</option>
+                                        <option value="car">Car</option>
+                                        <option value="motorcycle">Motorcycle</option>
+                                        <option value="van">Van</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">Check-in Time</label>
+                                    <input type="datetime-local" class="form-control" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">Duration (hours)</label>
+                                    <input type="number" class="form-control" min="1" max="24" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label required">Preferred Location</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select parking location</option>
+                                        <option value="A1">Block A - Level 1</option>
+                                        <option value="A2">Block A - Level 2</option>
+                                        <option value="B1">Block B - Level 1</option>
+                                        <option value="B2">Block B - Level 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary btn-lg px-5" onclick="submitForms()">
+                        Confirm Booking
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Templates -->
+    <div class="notification alert alert-success alert-dismissible fade" role="alert" id="successNotification">
+        <i class="bi bi-check-circle-fill me-2"></i>
+        <strong>Success!</strong> Your parking has been booked.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <div class="notification alert alert-warning alert-dismissible fade" role="alert" id="timeNotification">
+        <i class="bi bi-clock-fill me-2"></i>
+        <strong>Time Alert!</strong> Your parking time will expire in 15 minutes.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <div class="modal fade" id="paymentModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Payment Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <h6>Booking Summary</h6>
+                        <hr>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Parking Duration:</span>
+                            <span id="parkingDuration">2 hours</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Base Rate:</span>
+                            <span id="baseRate">$10.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Additional Charges:</span>
+                            <span id="additionalCharges">$0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between fw-bold">
+                            <span>Total Amount:</span>
+                            <span id="totalAmount">$10.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Download Receipt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function submitForms() {
+            // Show success notification
+            const notification = document.getElementById('successNotification');
+            notification.classList.add('show');
+            notification.style.display = 'block';
+            
+            // Show payment modal
+            const paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+            paymentModal.show();
+
+            // Simulate time notification after 5 seconds (for demo purposes)
+            setTimeout(() => {
+                const timeNotification = document.getElementById('timeNotification');
+                timeNotification.classList.add('show');
+                timeNotification.style.display = 'block';
+            }, 5000);
+
+            // Hide notifications after 5 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 300);
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartPark - Intelligent Parking Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a4db3 100%);
+        }
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .stats-icon {
+            font-size: 2rem;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-p-square-fill text-primary me-2 fs-3"></i>
+                <span class="fw-bold">SmartPark</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary px-4" href="#get-started">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-primary text-white pt-5">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center pt-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-3 fw-bold mb-4">Smart Parking for Smart Cities</h1>
+                    <p class="lead mb-5">Find, book, and pay for parking spots in real-time. Save time and reduce stress with our intelligent parking solutions.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                        <a href="#get-started" class="btn btn-light btn-lg px-4">
+                            Get Started <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#demo" class="btn btn-outline-light btn-lg px-4">Watch Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-primary py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="text-center text-white">
+                        <i class="bi bi-people-fill stats-icon"></i>
+                        <h3 class="mt-2 fw-bold">50K+</h3>
+                        <p class="text-white-50">Active Users</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="text-center text-white">
+                        <i class="bi bi-building stats-icon"></i>
+                        <h3 class="mt-2 fw-bold">1000+</h3>
+                        <p class="text-white-50">Parking Facilities</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="text-center text-white">
+                        <i class="bi bi-clock stats-icon"></i>
+                        <h3 class="mt-2 fw-bold">15min</h3>
+                        <p class="text-white-50">Time Saved</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="text-center text-white">
+                        <i class="bi bi-geo-alt stats-icon"></i>
+                        <h3 class="mt-2 fw-bold">25+</h3>
+                        <p class="text-white-50">Cities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3">Smart Features for Modern Parking</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 600px;">
+                    Our comprehensive parking management system offers everything you need for a seamless parking experience.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-geo-alt-fill text-primary fs-1 mb-3"></i>
+                            <h3 class="h4 mb-3">Real-time Availability</h3>
+                            <p class="text-muted mb-0">Find available parking spots instantly with our live tracking system.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-phone-fill text-primary fs-1 mb-3"></i>
+                            <h3 class="h4 mb-3">Mobile App Access</h3>
+                            <p class="text-muted mb-0">Book and manage your parking from anywhere using our mobile app.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-credit-card-fill text-primary fs-1 mb-3"></i>
+                            <h3 class="h4 mb-3">Contactless Payment</h3>
+                            <p class="text-muted mb-0">Quick and secure payment options for a touchless experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-clock-fill text-primary fs-1 mb-3"></i>
+                            <h3 class="h4 mb-3">Time Management</h3>
+                            <p class="text-muted mb-0">Set parking duration and receive notifications before expiry.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-car-front-fill text-primary fs-1 mb-3"></i>
+                            <h3 class="h4 mb-3">Vehicle Recognition</h3>
+                            <p class="text-muted mb-0">Automated license plate recognition for quick entry and exit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body p-4">
+                            <i class="bi bi-map-fill text-primary fs-1 mb-3"></i>
+                            <h3 class="h4 mb-3">Navigation</h3>
+                            <p class="text-muted mb-0">Turn-by-turn directions to your reserved parking spot.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary py-5">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-6 text-white fw-bold mb-4">Ready to transform your parking experience?</h2>
+                    <p class="lead text-white-50 mb-4">Join thousands of satisfied users who have simplified their parking with SmartPark.</p>
+                    <a href="#get-started" class="btn btn-light btn-lg px-5">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white-50 py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Product</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Features</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Pricing</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">API</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Documentation</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Privacy</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Terms</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-white-50">
+            <div class="text-center">
+                <p class="mb-0">© 2024 SmartPark. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
